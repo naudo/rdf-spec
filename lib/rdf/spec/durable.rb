@@ -1,5 +1,5 @@
 require 'rdf/spec'
-require 'spec'
+require 'rspec'
 
 # To use RDF::Durable to check that a repository maintains information between
 # instantiations, add a Proc that creates a repository before each item, and
@@ -18,7 +18,7 @@ require 'spec'
 #    it_should_behave_like RDF_Repository
 #  end
 #end
-share_as :RDF_Durable do
+shared_examples_for :RDF_Durable do
   include RDF::Spec::Matchers
 
   before :each do

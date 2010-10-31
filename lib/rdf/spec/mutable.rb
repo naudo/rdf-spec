@@ -2,7 +2,7 @@ require 'rdf'
 require 'rdf/spec'
 require 'rdf/ntriples'
 
-share_as :RDF_Mutable do
+shared_examples_for :RDF_Mutable do
   include RDF::Spec::Matchers
 
   before :each do

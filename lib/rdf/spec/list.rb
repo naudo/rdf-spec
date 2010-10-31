@@ -1,7 +1,7 @@
 require 'rdf/spec'
 require 'spec'
 
-share_as :RDF_List do
+shared_examples_for :RDF_List do
   before :all do
     @nil = RDF::List::NIL
   end
@@ -690,7 +690,7 @@ share_as :RDF_List do
   end
 end
 
-share_as :RDF_List_NIL do
+shared_examples_for :RDF_List_NIL do
   it "#subject returns rdf:nil" do
     RDF::List::NIL.subject.should == RDF.nil
   end

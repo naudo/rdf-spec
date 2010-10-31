@@ -1,7 +1,7 @@
 require 'rdf/spec'
-require 'spec'
+require 'rspec'
 
-share_as :RDF_Countable do
+shared_examples_for :RDF_Countable do
   include RDF::Spec::Matchers
 
   before :each do

@@ -2,7 +2,7 @@
 require 'rdf'
 require 'rdf/spec'
 
-share_as :RDF_Literal do
+shared_examples_for :RDF_Literal do
   XSD = RDF::XSD
 
   before :each do

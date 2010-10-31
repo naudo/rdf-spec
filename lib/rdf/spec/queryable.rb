@@ -1,7 +1,7 @@
 require 'rdf/spec'
-require 'spec'
+require 'rspec'
 
-share_as :RDF_Queryable do
+shared_examples_for :RDF_Queryable do
   include RDF::Spec::Matchers
 
   before :each do
@@ -305,6 +305,7 @@ share_as :RDF_Queryable do
     it "should return the correct value when the pattern matches" do
       matching_patterns = [[nil, nil, nil], [@subject, nil, nil], [nil, RDF::DC.creator, nil], [nil, nil, @literal]]
       matching_patterns.each do |matching_pattern|
+        require"ruby-debug";debugger;1
         @queryable.first_literal(matching_pattern).should == @literal
       end
     end

@@ -1,7 +1,7 @@
 require 'rdf/spec'
 require 'spec'
 
-share_as :RDF_Writer do
+shared_examples_for :RDF_Writer do
   include RDF::Spec::Matchers
 
   # TODO

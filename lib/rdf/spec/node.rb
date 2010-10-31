@@ -1,7 +1,7 @@
 require 'rdf'
 require 'rdf/spec'
 
-share_as :RDF_Node do
+shared_examples_for :RDF_Node do
   before :each do
     raise '+@new+ must be defined in a before(:each) block' unless instance_variable_get('@new')
   end

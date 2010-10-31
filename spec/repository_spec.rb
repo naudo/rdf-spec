@@ -7,5 +7,5 @@ describe RDF::Repository do
   end
 
   # @see lib/rdf/spec/repository.rb
-  it_should_behave_like RDF_Repository
+  it_should_behave_like :RDF_Repository
 end

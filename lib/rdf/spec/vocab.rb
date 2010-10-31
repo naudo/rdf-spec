@@ -1,7 +1,7 @@
 require 'rdf/spec'
 require 'spec'
 
-share_as :RDF_Vocabulary do
+shared_examples_for :RDF_Vocabulary do
   include RDF::Spec::Matchers
 
   # TODO

@@ -1,7 +1,7 @@
 require 'rdf/spec'
 require 'spec'
 
-share_as :RDF_Resource do
+shared_examples_for :RDF_Resource do
   include RDF::Spec::Matchers
 
   # TODO

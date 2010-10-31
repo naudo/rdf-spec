@@ -8,5 +8,5 @@ describe RDF::Enumerable do
   end
 
   # @see lib/rdf/spec/enumerable.rb
-  it_should_behave_like RDF_Enumerable
+  it_should_behave_like :RDF_Enumerable
 end

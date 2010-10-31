@@ -9,5 +9,5 @@ describe RDF::Queryable do
   end
 
   # @see lib/rdf/spec/queryable.rb
-  it_should_behave_like RDF_Queryable
+  it_should_behave_like :RDF_Queryable
 end

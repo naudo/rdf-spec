@@ -8,5 +8,5 @@ describe RDF::Countable do
   end
 
   # @see lib/rdf/spec/countable.rb
-  it_should_behave_like RDF_Countable
+  it_should_behave_like :RDF_Countable
 end

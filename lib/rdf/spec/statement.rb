@@ -1,7 +1,7 @@
 require 'rdf/spec'
 require 'spec'
 
-share_as :RDF_Statement do
+shared_examples_for :RDF_Statement do
   include RDF::Spec::Matchers
 
   before :each do

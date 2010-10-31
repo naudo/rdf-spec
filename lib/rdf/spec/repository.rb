@@ -1,7 +1,7 @@
 require 'rdf/spec'
-require 'spec'
+require 'rspec'
 
-share_as :RDF_Repository do
+shared_examples_for :RDF_Repository do
   include RDF::Spec::Matchers
 
   before :each do
@@ -19,7 +19,7 @@ share_as :RDF_Repository do
       @countable.insert(*@statements)
     end
 
-    it_should_behave_like RDF_Countable
+    it_should_behave_like :RDF_Countable
   end
 
   context "when enumerating statements" do
@@ -30,7 +30,7 @@ share_as :RDF_Repository do
       @enumerable.insert(*@statements)
     end
 
-    it_should_behave_like RDF_Enumerable
+    it_should_behave_like :RDF_Enumerable
   end
 
   context "when querying statements" do
@@ -41,7 +41,7 @@ share_as :RDF_Repository do
       @subject   = RDF::URI.new('http://rubygems.org/gems/rdf')
     end
 
-    it_should_behave_like RDF_Queryable
+    it_should_behave_like :RDF_Queryable
   end
 
   context "when updating" do
@@ -53,7 +53,7 @@ share_as :RDF_Repository do
       @context = RDF::URI.new('http://example.org/context')
     end
 
-    it_should_behave_like RDF_Mutable
+    it_should_behave_like :RDF_Mutable
   end
 
   context "as a durable repository" do
@@ -63,6 +63,6 @@ share_as :RDF_Repository do
       @load_durable ||= lambda { @repository }
     end
 
-    it_should_behave_like RDF_Durable
+    it_should_behave_like :RDF_Durable
   end
 end
